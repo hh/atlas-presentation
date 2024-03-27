@@ -1,12 +1,57 @@
-#+TITLE:  Presentation Template
-#+PROPERTY: header-args:tmux :session ":coop-mode"
-
+#+TITLE:  The Road to Emeritus
+#+PROPERTY: +header-args:tmux :session ":coop-mode"
+#+PROPERTY: +header-args:tmux :results silent
+* to render this presentation :noexport:
+** ensure client is index.html
+#+begin_src shell :results silent
+ln -sf present_client.html index.html
+#+end_src
+** export to reveal.js
+#+begin_src elisp :results silent
+(org-re-reveal-export-to-html)
+#+end_src
 * Introduction
 * Point One
 * Point Two
 * Point Three
 * Conclusion
 * Footnotes :noexport:
+** emacs
+#+begin_src tmux :session ":emacs"
+emacsclient -nw ~/present.org
+#+end_src
+** environment
+** webfolder
+#+name: webfolder
+#+begin_src elisp
+(file-name-directory buffer-file-name)
+#+end_src
+
+** spacename
+#+name: spacename
+#+begin_src shell
+echo -n $SPACENAME
+#+end_src
+
+#+RESULTS: spacename
+#+begin_example
+atlas
+#+end_example
+
+** webserver
+** use our own
+We want our webserver to run on port 4000
+#+begin_src tmux :session ":present-webserver" :noweb yes
+cd <<webfolder()>>
+python3 -m http.server  4000
+#+end_src
+** use original
+We want to take over existing web server
+#+begin_src tmux :session "servers:web-server" :noweb yes
+
+cd <<webfolder()>>
+python3 -m http.server
+#+end_src
 ** REVEAL_VARS
 #+NOEXPORT_FILE_NAME: index.html
 #+REVEAL_ROOT: https://multiplex.ii.nz
@@ -48,15 +93,3 @@
 #+OPTIONS: reveal_keyboard:t
 #+OPTIONS: author:nil
 #+OPTIONS: timestamp:nil
-** LOCAL VARS
-#+begin_src elisp
-(add-hook 'after-save-hook
-  (lambda nil
-    (when (org-html-export-to-html)
-      (progn
-        (rename-file "presentation.html" "admin.html" t)
-        (rename-file "presentation_client.html" "index.html" t))))
-  t
-  t
-  )
-#+end_src
