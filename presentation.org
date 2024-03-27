@@ -1,4 +1,5 @@
 #+TITLE:  Presentation Template
+#+PROPERTY: header-args:tmux :session ":coop-mode"
 
 * Introduction
 * Point One
@@ -6,7 +7,8 @@
 * Point Three
 * Conclusion
 * Footnotes :noexport:
-** LOCAL VARS
+** REVEAL_VARS
+#+NOEXPORT_FILE_NAME: index.html
 #+REVEAL_ROOT: https://multiplex.ii.nz
 #+REVEAL_MULTIPLEX_URL: https://multiplex.ii.nz/
 #+REVEAL_MULTIPLEX_SOCKETIO_URL: https://multiplex.ii.nz/socket.io/socket.io.js
@@ -46,3 +48,15 @@
 #+OPTIONS: reveal_keyboard:t
 #+OPTIONS: author:nil
 #+OPTIONS: timestamp:nil
+** LOCAL VARS
+#+begin_src elisp
+(add-hook 'after-save-hook
+  (lambda nil
+    (when (org-html-export-to-html)
+      (progn
+        (rename-file "presentation.html" "admin.html" t)
+        (rename-file "presentation_client.html" "index.html" t))))
+  t
+  t
+  )
+#+end_src
