@@ -4,7 +4,7 @@
 * to render this presentation :noexport:
 ** ensure client is index.html
 #+begin_src shell :results silent
-ln -sf present_client.html index.html
+ln -sf emeritus_client.html index.html
 #+end_src
 ** export to reveal.js
 #+begin_src elisp :results silent
@@ -18,7 +18,7 @@ ln -sf present_client.html index.html
 * Footnotes :noexport:
 ** emacs
 #+begin_src tmux :session ":emacs"
-emacsclient -nw ~/present.org
+emacsclient -nw ~/emeritus.org
 #+end_src
 ** environment
 ** webfolder
