@@ -13,6 +13,7 @@
 ln -sf emeritus_client.html index.html
 #+end_src
 *** export to reveal.js
+You can also type *,evv*
 #+begin_src elisp :results silent
 (org-re-reveal-export-to-html)
 #+end_src
