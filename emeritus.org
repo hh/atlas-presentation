@@ -1,21 +1,21 @@
 #+TITLE:  The Road to Emeritus
 #+PROPERTY: +header-args:tmux :session ":coop-mode"
 #+PROPERTY: +header-args:tmux :results silent
-* to render this presentation :noexport:
-** ensure client is index.html
-#+begin_src shell :results silent
-ln -sf emeritus_client.html index.html
-#+end_src
-** export to reveal.js
-#+begin_src elisp :results silent
-(org-re-reveal-export-to-html)
-#+end_src
 * Introduction
 * Point One
 * Point Two
 * Point Three
 * Conclusion
 * Footnotes :noexport:
+** to render this presentation :noexport:
+*** ensure client is index.html
+#+begin_src shell :results silent
+ln -sf emeritus_client.html index.html
+#+end_src
+*** export to reveal.js
+#+begin_src elisp :results silent
+(org-re-reveal-export-to-html)
+#+end_src
 ** emacs
 #+begin_src tmux :session ":emacs"
 emacsclient -nw ~/emeritus.org
