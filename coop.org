@@ -1,0 +1,204 @@
+#+TITLE:  The Future is Cooperations (not Corporations)
+#+PROPERTY: +header-args:tmux :session ":coop-mode"
+#+PROPERTY: +header-args:tmux :results silent
+* iiUniverse
+** Cloud Native Kids Day
+** hh and tt and ii
+*** leaving denver
+:PROPERTIES:
+:reveal_background: ./ii+team/ii-am-valuable.jpg
+:END:
+*** ii has arrived
+:PROPERTIES:
+:reveal_background: ./ii+team/ii-has-arrived.jpg
+:END:
+*** Father vs Son
+:PROPERTIES:
+:reveal_background: ./ii+team/father-vs-son.jpg
+:END:
+*** Learning Together
+:PROPERTIES:
+:reveal_background: ./ii+team/learning-together.jpg
+:END:
+*** TT first iiPod
+:PROPERTIES:
+:reveal_background: ./ii+team/tt-first-iipod.jpg
+:END:
+*** ii Team
+:PROPERTIES:
+:reveal_background: ./ii+team/ii-team.jpg
+:END:
+*** tour of Paris
+:PROPERTIES:
+:reveal_background: ./ii+team/bagchase.jpg
+:END:
+** Cloud Native Kids Prep
+*** many USB
+:PROPERTIES:
+:reveal_background: ./prep/ii-many-usb.jpg
+:END:
+*** make it French
+:PROPERTIES:
+:reveal_background: ./prep/make-it-french.jpg
+:END:
+*** make it work
+:PROPERTIES:
+:reveal_background: ./prep/make-it-work.jpg
+:END:
+*** flashing many sticks
+:PROPERTIES:
+:reveal_background: ./prep/flashing-many-sticks.jpg
+:END:
+*** thinkbook
+:PROPERTIES:
+:reveal_background: ./prep/think-book.jpg
+:END:
+*** lenovo + fedora
+:PROPERTIES:
+:reveal_background: ./prep/lenovo-fedora-1.jpg
+:END:
+*** close up
+:PROPERTIES:
+:reveal_background: ./prep/lenovo-fedora-2.jpg
+:END:
+** Cloud Native Kids Classroom
+*** USB Boot
+[[file:3 classroom/0 USB boot.jpeg]]
+*** Select Boot Drive
+[[file:3 classroom/0.1 Select Boot Drive.png]]
+*** iiRebooting
+[[file:3 classroom/2 iiRebooting into Sonic Pi .jpeg]]
+** Cloud Native Kids Day
+*** iiEDU First students
+[[file:3 classroom/3 iiEDU first students.jpeg]]
+*** Cooperative Musical Coding
+[[file:4 kids/Cooperative Musical Coding.jpeg]]
+*** Instructor iiPii
+[[file:4 kids/Instructor iiPi.jpeg]]
+*** Many Kids
+[[file:4 kids/Many Kids.jpeg]]
+*** Sonic Pi Kids 1
+[[file:4 kids/Sonic Pi Kid #2.jpeg]]
+*** Sonic Pi Kids 2
+[[file:4 kids/Sonic Pi Kid #3.jpeg]]
+*** Sonic Pi Kids 3
+[[file:4 kids/Sonic Pi Kid #4.jpeg]]
+*** Teaching Minecraft
+[[file:4 kids/Teaching Mincraft.jpeg]]
+** Viral Genersity
+** Cambodia
+
+* Cooperations
+** Shared Spaces
+** Same Page
+** Co-Authored-By: i+i
+* Cloud Native
+** Containers
+* iiPod
+** cloudnative.coop
+* iiPi
+** PiKVM
+* iiPhone
+** grapheneos.org
+* iiSP
+** PBS Station
+* ii.coop
+** ii Pi + Phone + Service Provider
+** Hippie Balcony Busking
+* Footnotes :noexport:
+** to render this presentation :noexport:
+*** ensure client is index.html
+#+begin_src shell :results silent :var BASENAME=(file-name-base (buffer-file-name))
+ln -sf ${BASENAME}_client.html index.html
+ln -sf ${BASENAME}.html present.html
+#+end_src
+
+*** export to reveal.js
+You can also type *,evv*
+#+begin_src elisp :results silent
+(org-re-reveal-export-to-html)
+#+end_src
+** emacs
+#+begin_src tmux :session ":emacs" :var BASENAME=(file-name-base (buffer-file-name))
+emacsclient -nw ~/coop.org
+#+end_src
+** environment
+*** filename
+#+name: filename
+#+begin_src elisp :results silent
+(file-name-base buffer-file-name)
+#+end_src
+
+*** webfolder
+#+name: webfolder
+#+begin_src elisp :results silent
+(file-name-directory buffer-file-name)
+#+end_src
+
+** spacename
+#+name: spacename
+#+begin_src shell
+echo -n $SPACENAME
+#+end_src
+
+#+RESULTS: spacename
+#+begin_example
+atlas
+#+end_example
+
+** webserver
+*** use our own
+We want our webserver to run on port 4000
+#+begin_src tmux :session ":present-webserver" :noweb yes
+cd <>
+python3 -m http.server  4000
+#+end_src
+*** use original
+We want to take over existing web server
+#+begin_src tmux :session "servers:web-server" :noweb yes
+
+cd <<webfolder()>>
+python3 -m http.server
+#+end_src
+** REVEAL_VARS
+#+NOEXPORT_FILE_NAME: index.html
+#+REVEAL_ROOT: https://multiplex.ii.nz
+#+REVEAL_MULTIPLEX_URL: https://multiplex.ii.nz/
+#+REVEAL_MULTIPLEX_SOCKETIO_URL: https://multiplex.ii.nz/socket.io/socket.io.js
+#+REVEAL_VERSION: 4
+#+REVEAL_HEAD_PREAMBLE: <link rel="preconnect" href="https://fonts.googleapis.com">
+#+REVEAL_HEAD_PREAMBLE: <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+#+REVEAL_EXTRA_CSS: https://unpkg.com/nes.css@2.3.0/css/nes.min.css
+#+REVEAL_EXTRA_CSS: https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap
+#+REVEAL_EXTRA_CSS: /stylesheets/infocards.css
+#+REVEAL_HLEVEL: 3
+#+REVEAL_MARGIN: 0.1
+#+REVEAL_WIDTH: 1000
+#+REVEAL_HEIGHT: 600
+#+REVEAL_MAX_SCALE: 3.5
+#+REVEAL_MIN_SCALE: 0.2
+#+REVEAL_PLUGINS: (markdown notes highlight multiplex)
+#+REVEAL_SLIDE_NUMBER: ""
+#+REVEAL_SPEED: 1
+#+REVEAL_THEME: simple
+#+REVEAL_THEME_OPTIONS: beige|black|blood|league|moon|night|serif|simple|sky|solarized|white
+#+REVEAL_TRANS: none
+#+REVEAL_TRANS_OPTIONS: none|cube|fade|concave|convex|page|slide|zoom
+#+REVEAL_EXTRA_OPTIONS: autoSlide:30000, loop:true
+#+REVEAL_PREAMBLE: <script src="/socket.io/socket.io.js"></script><script src="/qrcode.min.js"></script><script src="/prezzie-init.js"></script>
+#+REVEAL_MULTIPLEX_SECRET: ', secret: window.secret, undefined:'
+#+REVEAL_MULTIPLEX_ID: ', id: window.socketID, undefined: '
+#+REVEAL_MULTIPLEX_URL: https://multiplex.ii.nz
+#+REVEAL_EXTRA_CSS: ./fix.css
+#+OPTIONS: num:nil
+#+OPTIONS: toc:nil
+#+OPTIONS: mathjax:Y
+#+OPTIONS: reveal_single_file:nil
+#+OPTIONS: reveal_control:t
+#+OPTIONS: reveal-progress:t
+#+OPTIONS: reveal_history:nil
+#+OPTIONS: reveal_center:t
+#+OPTIONS: reveal_rolling_links:nil
+#+OPTIONS: reveal_keyboard:t
+#+OPTIONS: author:nil
+#+OPTIONS: timestamp:nil
