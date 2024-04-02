@@ -1,107 +1,120 @@
 #+TITLE:  The Future is Cooperations (not Corporations)
 #+PROPERTY: +header-args:tmux :session ":coop-mode"
 #+PROPERTY: +header-args:tmux :results silent
-* iiUniverse
-** Cloud Native Kids Day
-** hh and tt and ii
+* hh and tt and ii
 *** leaving denver
 :PROPERTIES:
-:reveal_background: ./ii+team/ii-am-valuable.jpg
+:reveal_background: ./ii-am-valuable.jpg
 :END:
 *** ii has arrived
 :PROPERTIES:
-:reveal_background: ./ii+team/ii-has-arrived.jpg
+:reveal_background: ./ii-has-arrived.jpg
 :END:
 *** Father vs Son
 :PROPERTIES:
-:reveal_background: ./ii+team/father-vs-son.jpg
+:reveal_background: ./father-vs-son.jpg
+:END:
+*** A quick tour of Paris
+:PROPERTIES:
+:reveal_background: ./bagchase.jpg
 :END:
 *** Learning Together
 :PROPERTIES:
-:reveal_background: ./ii+team/learning-together.jpg
+:reveal_background: ./learning-together.jpg
 :END:
 *** TT first iiPod
 :PROPERTIES:
-:reveal_background: ./ii+team/tt-first-iipod.jpg
+:reveal_background: ./tt-first-iipod.jpg
 :END:
 *** ii Team
 :PROPERTIES:
-:reveal_background: ./ii+team/ii-team.jpg
+:reveal_background: ./ii-team.jpg
 :END:
-*** tour of Paris
-:PROPERTIES:
-:reveal_background: ./ii+team/bagchase.jpg
-:END:
-** Cloud Native Kids Prep
+* Cloud Native Kids Prep
+#+begin_notes
+Can anyone describe Cloud Native?
+Can anyone describe Containers?
+How do humans ship Containers?
+#+end_notes
 *** many USB
 :PROPERTIES:
-:reveal_background: ./prep/ii-many-usb.jpg
+:reveal_background: ./ii-many-usb.jpg
 :END:
 *** make it French
 :PROPERTIES:
-:reveal_background: ./prep/make-it-french.jpg
+:reveal_background: ./make-it-french.jpg
 :END:
 *** make it work
 :PROPERTIES:
-:reveal_background: ./prep/make-it-work.jpg
+:reveal_background: ./make-it-work.jpg
 :END:
 *** flashing many sticks
 :PROPERTIES:
-:reveal_background: ./prep/flashing-many-sticks.jpg
+:reveal_background: ./flashing-many-sticks.jpg
 :END:
 *** thinkbook
 :PROPERTIES:
-:reveal_background: ./prep/think-book.jpg
+:reveal_background: ./think-book.jpg
 :END:
 *** lenovo + fedora
 :PROPERTIES:
-:reveal_background: ./prep/lenovo-fedora-1.jpg
+:reveal_background: ./lenovo-fedora-1.jpg
 :END:
 *** close up
 :PROPERTIES:
-:reveal_background: ./prep/lenovo-fedora-2.jpg
+:reveal_background: ./lenovo-fedora-2.jpg
 :END:
-** Cloud Native Kids Classroom
+* Cloud Native Kids Classroom
 *** USB Boot
-[[file:3 classroom/0 USB boot.jpeg]]
+:PROPERTIES:
+:reveal_background: ./usb-boot.jpg
+:END:
 *** Select Boot Drive
-[[file:3 classroom/0.1 Select Boot Drive.png]]
+:PROPERTIES:
+:reveal_background: ./select-boot-drive.jpg
+:END:
 *** iiRebooting
-[[file:3 classroom/2 iiRebooting into Sonic Pi .jpeg]]
-** Cloud Native Kids Day
-*** iiEDU First students
-[[file:3 classroom/3 iiEDU first students.jpeg]]
+:PROPERTIES:
+:reveal_background: ./ii-rebooting-into-sonic-pi.jpg
+:END:
+* Cloud Native Kids Day
+*** First students
+:PROPERTIES:
+:reveal_background: ./ii-first-students.jpg
+:END:
 *** Cooperative Musical Coding
-[[file:4 kids/Cooperative Musical Coding.jpeg]]
-*** Instructor iiPii
-[[file:4 kids/Instructor iiPi.jpeg]]
+:PROPERTIES:
+:reveal_background: ./cooperative-musical-coding.jpg
+:END:
+*** Instructor Sonic Pi
+:PROPERTIES:
+:reveal_background: ./instructor-sonicpi.jpg
+:END:
 *** Many Kids
-[[file:4 kids/Many Kids.jpeg]]
+:PROPERTIES:
+:reveal_background: ./many-kids.jpg
+:END:
 *** Sonic Pi Kids 1
-[[file:4 kids/Sonic Pi Kid #2.jpeg]]
+:PROPERTIES:
+:reveal_background: ./sonic-pi-kid-1.jpg
+:END:
 *** Sonic Pi Kids 2
-[[file:4 kids/Sonic Pi Kid #3.jpeg]]
+:PROPERTIES:
+:reveal_background: ./sonic-pi-kid-2.jpg
+:END:
 *** Sonic Pi Kids 3
-[[file:4 kids/Sonic Pi Kid #4.jpeg]]
+:PROPERTIES:
+:reveal_background: ./sonic-pi-kid-3.jpg
+:END:
 *** Teaching Minecraft
-[[file:4 kids/Teaching Mincraft.jpeg]]
-** Viral Genersity
-** Cambodia
-
+:PROPERTIES:
+:reveal_background: ./teaching-minecraft.jpg
+:END:
 * Cooperations
 ** Shared Spaces
 ** Same Page
 ** Co-Authored-By: i+i
-* Cloud Native
-** Containers
-* iiPod
-** cloudnative.coop
-* iiPi
-** PiKVM
-* iiPhone
-** grapheneos.org
-* iiSP
-** PBS Station
+* cloudnative.coop
 * ii.coop
 ** ii Pi + Phone + Service Provider
 ** Hippie Balcony Busking
